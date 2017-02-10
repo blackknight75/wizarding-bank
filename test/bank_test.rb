@@ -12,11 +12,13 @@ class BankTest < Minitest::Test
   end
 
   def test_bank_has_a_name
+    skip
     bank = Bank.new("Chase")
     assert_equal "Chase", bank.name
   end
 
   def test_bank_has_a_different_name
+    skip
     chase = Bank.new("Chase")
     wells_fargo = Bank.new("Wells Fargo")
     assert_equal "Chase", chase.name
@@ -24,6 +26,7 @@ class BankTest < Minitest::Test
   end
 
   def test_can_open_account
+    skip
     chase = Bank.new("Chase")
     person = Person.new("Minerva", 1000)
     chase.open_account(person, 1000)
@@ -31,6 +34,7 @@ class BankTest < Minitest::Test
   end
 
   def test_bank_has_new_account_with_name_and_balance
+    skip
     chase = Bank.new("Chase")
     person = Person.new("Minerva", 1000)
     message = "An account has been opened for Minerva with Chase."
@@ -39,6 +43,7 @@ class BankTest < Minitest::Test
   end
 
   def test_cant_open_account
+    skip
     chase = Bank.new("Chase")
     person = Person.new("Minerva", 1000)
     message = "Not enough galleon to open account."
@@ -46,6 +51,7 @@ class BankTest < Minitest::Test
   end
 
   def test_how_much_money_in_bank_over_all_accounts
+    skip
     chase = Bank.new("Chase")
     person1 = Person.new("Minerva", 1000)
     person2 = Person.new("Bob", 1000)
@@ -57,6 +63,7 @@ class BankTest < Minitest::Test
   end
 
   def test_putting_money_in_bank_takes_away_from_galleon
+    skip
     chase = Bank.new("Chase")
     person = Person.new("Minerva", 1000)
     message = "Not enough galleon to open account."
@@ -65,6 +72,7 @@ class BankTest < Minitest::Test
   end
 
   def test_can_deposit_galleon_to_account
+    skip
     chase = Bank.new("Chase")
     person = Person.new("Minerva", 1000)
     chase.open_account(person, 1000)
@@ -75,6 +83,7 @@ class BankTest < Minitest::Test
   end
 
   def test_cant_deposit_galleon_to_account_if_person_doesnt_have_enough
+    skip
     chase = Bank.new("Chase")
     person = Person.new("Minerva", 1000)
     chase.open_account(person, 1000)
@@ -84,6 +93,7 @@ class BankTest < Minitest::Test
   end
 
   def test_customer_can_withdraw_money_from_account
+    skip
     chase = Bank.new("Chase")
     person = Person.new("Minerva", 1000)
     chase.open_account(person, 1000)
@@ -93,6 +103,7 @@ class BankTest < Minitest::Test
   end
 
   def test_cant_withdrawl
+    skip
     chase = Bank.new("Chase")
     person = Person.new("Minerva", 1000)
     chase.open_account(person, 1000)
@@ -102,6 +113,7 @@ class BankTest < Minitest::Test
   end
 
   def test_can_transfer_galleon_to_other_account
+    skip
     chase = Bank.new("Chase")
     wells_fargo = Bank.new("Wells Fargo")
     person = Person.new("Minerva", 2500)
