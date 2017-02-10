@@ -11,16 +11,19 @@ class PersonTest < Minitest::Test
   end
 
   def test_person_has_name
+    skip
     person = Person.new("Minerva")
     assert_equal "Minerva", person.name
   end
 
   def test_person_can_have_different_name
+    skip
     person = Person.new("Luna")
     assert_equal "Luna", person.name
   end
 
   def test_person_has_galleon
+    skip
     person = Person.new("Minerva", 1000)
     assert_equal 1000, person.galleon
   end
