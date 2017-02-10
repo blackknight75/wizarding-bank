@@ -4,4 +4,4 @@
 
 *** Start with Bank and Person ***
 
-*** For Extra Spiciness ***
+*** For Extra Spiciness add Credit Feature ***
