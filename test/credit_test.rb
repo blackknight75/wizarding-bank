@@ -12,11 +12,13 @@ class CreditTest < Minitest::Test
   end
 
   def test_credit_has_name
+    skip
     amex = Credit.new("AMEX")
     assert_equal "AMEX", amex.card_name
   end
 
   def test_can_open_account
+    skip
     amex = Credit.new("AMEX")
     person = Person.new("Minerva",100, 680)
     message = "Minerva has opened a new AMEX credit card. Credit Limit: 5000"
@@ -24,6 +26,7 @@ class CreditTest < Minitest::Test
   end
 
   def test_decline_and_max_credit
+    skip
     amex = Credit.new("AMEX")
     person = Person.new("Bill",100, 800)
     message = "Bill has opened a new AMEX credit card. Credit Limit: 10000"
@@ -31,6 +34,7 @@ class CreditTest < Minitest::Test
   end
 
   def test_cant_open_account
+    skip
     amex = Credit.new("AMEX")
     person = Person.new("Minerva",100, 400)
     message = "Insuficient funds to open new card."
@@ -38,6 +42,7 @@ class CreditTest < Minitest::Test
   end
 
   def test_can_spend_credit
+    skip
     amex = Credit.new("AMEX")
     person = Person.new("Minerva",100, 655)
     amex.open_account(person)
@@ -48,6 +53,7 @@ class CreditTest < Minitest::Test
   end
 
   def test_card_declined
+    skip
     amex = Credit.new("AMEX")
     person = Person.new("Minerva",100, 600)
     amex.open_account(person)
@@ -55,6 +61,7 @@ class CreditTest < Minitest::Test
   end
 
   def test_person_can_pay_down_their_credit_card
+    skip
     amex = Credit.new("AMEX")
     person = Person.new("Minerva",300, 600)
     amex.open_account(person)
@@ -64,6 +71,7 @@ class CreditTest < Minitest::Test
     assert_equal 750, person.credit_cards[amex.card_name][:available_credit]
   end
   def test_insuficient_funds_to_pay_card
+    skip
     amex = Credit.new("AMEX")
     person = Person.new("Minerva",300, 600)
     amex.open_account(person)
